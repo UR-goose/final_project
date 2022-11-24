@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>发布比赛</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./base.html">
+                <img src="../static/img/LOGO.jpg" alt="Logo" style="width:80px;" >
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">主页</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">赛事</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">往期赛事</a></li>
+                      <li><a class="dropdown-item" href="#">当期赛事</a></li>
+                      <li><a class="dropdown-item" href="#">发起赛事</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">论坛</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">赛事话题</a></li>
+                      <li><a class="dropdown-item" href="#">闲聊杂谈</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">众筹</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">众筹列表</a></li>
+                      <li><a class="dropdown-item" href="#">发起众筹</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">帮助</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">常见问题</a></li>
+                      <li><a class="dropdown-item" href="#">会员体系</a></li>
+                    </ul>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="./login.html">登录</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./register.html">注册</a>
+                  </li> -->
+                  <!-- <li class="nav-item dropdown">
+                    <a class="nav-link-my-avater" href="#" role="button" data-bs-toggle="dropdown">
+                      <img src="../static/img/我的头像.jpg" alt="Logo" style="width:40px;" class="rounded-pill">
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">我的主页</a></li>
+                      <li><a class="dropdown-item" href="#">我的消息</a></li>
+                      <li><a class="dropdown-item" href="#">登出账号</a></li>
+                    </ul>
+                  </li> -->
+    
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <!-- 发布帖子 -->
+        <div class="login-layout">
+        <div class="container mt-3">
+            <h1>发布比赛</h1>
+            <form action="/action_page.php">
+              <div class="mb-3 mt-3">
+                <label for="标题">比赛名称：</label>
+                <input type="text" class="form-control" id="article-title" placeholder="请输入比赛名称" name="标题">
+              </div>
+              <label for="sel1" class="form-label">悬赏角色：</label>
+              <select class="form-select" id="sel1" name="sellist1">
+                <option>魈</option>
+                <option>优菈</option>
+                <option>珊瑚宫心海</option>
+                <option>赛诺</option>
+              </select>
+              <br>
+              <div class="mb-3">
+                <label for="日期">比赛开始时间：</label>
+              <input type="date" id="start" name="trip-start" value="2022-07-22" min="2022-01-01" max="2032-12-31">
+            </div>
+            <div class="mb-3">
+              <label for="日期">比赛结束时间：</label>
+            <input type="date" id="start" name="trip-start" value="2022-07-22" min="2022-01-01" max="2032-12-31">
+          </div>
+              <div class="mb-3">
+                <label for="内容">前言：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入内容" name="内容" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="内容">整体规则：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入规则" name="内容" rows="10"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="内容">具体细则：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入规则" name="内容" rows="10"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="内容">赛道设置：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入赛道1" name="内容" rows="1"></textarea>
+                 <textarea class="form-control" id="editor" placeholder="请输入赛道2" name="内容" rows="1"></textarea>
+                 <textarea class="form-control" id="editor" placeholder="请输入赛道3" name="内容" rows="1"></textarea>
+                 <textarea class="form-control" id="editor" placeholder="请输入赛道4" name="内容" rows="1"></textarea>
+                 <textarea class="form-control" id="editor" placeholder="请输入赛道5" name="内容" rows="1"></textarea>
+                 <textarea class="form-control" id="editor" placeholder="请输入赛道6" name="内容" rows="1"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="内容">赛道说明：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入说明" name="内容" rows="10"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="内容">奖励说明：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入说明" name="内容" rows="10"></textarea>
+              </div>
+                    <div class="content-img">
+                      <ul class="content-img-list">
+                        <!-- <li class="content-img-list-item"><img src="https://www.baidu.com/img/bd_logo1.png" alt=""><a class="delete-btn"><i class="ico-delete"></i></a></li> -->
+                      </ul>
+                      <div class="file">
+                        <i class="ico-plus"></i>上传海报：支持jpg/png<input type="file" name="file" accept="image/*" id="upload" >
+                      </div>	
+                    </div>
+                    <br> 
+                    <div class="mb-3">
+                      <label for="内容">奖金总额（元）：</label>
+                    <input type="number" id="tentacles" name="tentacles">
+                  </div>
+                    <br>
+
+              <!-- <div class="form-check mb-3">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="remember"> 记住我
+                </label>
+              </div> -->
+              <button type="submit" class="btn btn-primary">确认支付</button>
+            </form>
+          </div>
+        </div>
+            <!-- 页脚 -->
+            <div class="footer">
+              <div class="layout footer__inner">
+                  <div class="footer__copyright">
+                    <p>和谐社区，文明发言，谨防电信诈骗</p>
+                    <p class="copyright text-muted">Copyright &copy; Your Website 2021</p>
+                  </div>
+              </div>
+            </div>
+    
+</body>
+</html>
